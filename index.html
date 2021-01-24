@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="resources/icon.svg" type="image/x-icon">
+    <title>Netflix | Landing page UI Design</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="resources/logo.svg"></a>
+    <ul class="navigation">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Series TV</a></li>
+        <li><a href="#">Peliculas</a></li>
+        <li><a href="#">Añadido recientemente</a></li>
+        <li><a href="#">Mi lista</a></li>
+    </ul>
+    <div class="search">
+        <input type="text" placeholder="Buscar">
+        <i class="fas fa-search"></i>
+    </div>
+    </header>
+    <div class="banner">
+        <img src="resources/bg.jpg" class="bg">
+        <div class="content">
+            <img src="resources/name.png" class="movieTitle">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Acci&oacute;n</span>
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem dignissimos nisi totam placeat? Aspernatur tempore incidunt esse ut nemo voluptatibus, eveniet iure excepturi minima dolores perspiciatis! Quam, deserunt nulla.</p>
+            <div class="buttons">
+                <a href="#"><i class="fas fa-play"></i> Iniciar</a>
+                <a href="#"><i class="fas fa-plus"></i> Mi Lista</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="resources/play.png">Whatch Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <video src="resources/videoTrailer.mp4" controls="true"></video>
+        <img src="resources/close.png" class="close" onclick="toggleVideo();">
+    </div>
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+</body>
+</html>
